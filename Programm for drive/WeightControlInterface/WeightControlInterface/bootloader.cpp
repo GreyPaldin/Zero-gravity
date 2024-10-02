@@ -86,7 +86,7 @@ void Bootloader::C_Erase(void){
     this->Serial->write(header.SetRawFromHeader());
     this->TimeoutTimer->start(2500);
 }
-
+//Блок отвечающий за переход контроллера в рабочую область программы для работы с двигателями и движением по траектории.
 void Bootloader::C_Jump(void){
     if (!(this->SerialLock.Lock())){
         return;
